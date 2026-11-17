@@ -1,7 +1,7 @@
 class Wardite < Formula
   desc "WebAssembly runtime written in Ruby"
   homepage "https://github.com/udzura/wardite"
-  version "1.2.1"
+  version "1.2.2"
   license "Apache-2.0"
 
   on_macos do
@@ -9,25 +9,25 @@ class Wardite < Formula
     depends_on macos: :ventura
 
     url "https://github.com/udzura/wardite/releases/download/v#{version}/wardite-v#{version}-aarch64-macos.13.0.gz"
-    sha256 "1b4509f8fe7a7501cf6e822001a75d6d16773d7ec45d3540653b45e23dc0cea0"
+    sha256 "e2dbabd1345065b5ac162ae4097b44341b99cb6187360ade793317ef7ac2b64b"
   end
 
   on_linux do
     on_arm do
       url "https://github.com/udzura/wardite/releases/download/v#{version}/wardite-v#{version}-aarch64-linux-gnu.2.28.gz"
-      sha256 "1400400eb467ae94bd1c3bb2f3599da391a9a42884b3284e165cbdeafee2eac7"
+      sha256 "7429c621bacc789515fb1ffd50e73e999e22bcc979ae52f4cb0323b5d1dbd232"
     end
 
     on_intel do
       url "https://github.com/udzura/wardite/releases/download/v#{version}/wardite-v#{version}-x86_64-linux-gnu.2.28.gz"
-      sha256 "71d82a2db76bffa217a72a9e343ec1a340cb98da2812c9454062da580c63a709"
+      sha256 "c203bff7e35a8f59da6d0995c8117c19fbce9a0915643724c853972636a96aa7"
     end
   end
 
   release_version = version
   resource "licenses" do
     url "https://github.com/udzura/wardite/releases/download/v#{release_version}/wardite-v#{release_version}-licenses.txt"
-    sha256 "e25c44d8581152f300d77136968ae4a1503b783f92c36112a96ae6caa27a893a"
+    sha256 "c364d359144a48dfc39e767f0d981f298eb24c4fa45cfb9aed52b33a49d2d80a"
   end
 
   def install
